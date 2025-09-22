@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Tiley Lab Manual",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01_Computing/hpc.html",
+    "href": "chapters/01_Computing/hpc.html",
+    "title": "2  HPC",
+    "section": "",
+    "text": "2.1 Logging in and directory structures\nFIRST, use a terminal window to log into the HPC with the OIT instructions. Now, set that window aside for later.\nI typically find it helpful to create an ssh key for saving time. First, I navigate to my .ssh directory on the local machine and provide a unique name to the output to help manage the multiple keys for different organizations. When prompted for a passphrase, do not provide one as this will cause some issues with the MFA system of the HPC. After creating the key pair, you can edit the config file to provide a shortcut name.\nIn the config file, add the following lines, replacing UNITY_ID with your real one.\nYou will now have two files appear in the directory, ncsursa and ncsursa.pub. You will need to add the contents of your public (*.pub) file to your list of authorized keys on the HPC (remote). Simply open the ~/.ssh/authorized_keys file on the HPC and copy-paste the public key line there. Save all files and close both terminal windows. You should now be able to prompt a login with ssh ncsu.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>HPC</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01_Computing/hpc.html#logging-in-and-directory-structures",
+    "href": "chapters/01_Computing/hpc.html#logging-in-and-directory-structures",
+    "title": "2  HPC",
+    "section": "",
+    "text": "cd ~/.ssh\nssh-keygen -t rsa -f ncsursa\nvim config\n\nHost ncsu\n     User UNITY_ID\n     HostName login.hpc.ncsu.edu",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>HPC</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01_Computing/hpc.html#for-lab-server",
+    "href": "chapters/01_Computing/hpc.html#for-lab-server",
+    "title": "2  HPC",
+    "section": "2.2 For lab server",
+    "text": "2.2 For lab server\nssh-keygen -t ed25519\nThis time, you will need to create a passphrase …",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>HPC</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "3  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]

@@ -1,0 +1,29 @@
+# HPC
+
+## Logging in and directory structures
+
+FIRST, use a terminal window to log into the HPC with the OIT [instructions](https://hpc.ncsu.edu/Documents/GetStarted.php). Now, set that window aside for later.
+
+ I typically find it helpful to create an ssh key for saving time. First, I navigate to my *.ssh* directory on the local machine and provide a unique name to the output to help manage the multiple keys for different organizations. When prompted for a passphrase, do not provide one as this will cause some issues with the MFA system of the HPC. After creating the key pair, you can edit the config file to provide a shortcut name.
+
+```bash
+cd ~/.ssh
+ssh-keygen -t rsa -f ncsursa
+vim config
+```
+
+In the config file, add the following lines, replacing UNITY_ID with your real one.
+```bash
+Host ncsu
+     User UNITY_ID
+     HostName login.hpc.ncsu.edu
+```
+
+You will now have two files appear in the directory, *ncsursa* and *ncsursa.pub*. You will need to add the contents of your **public (\*.pub)** file to your list of authorized keys on the HPC (remote). Simply open the *~/.ssh/authorized_keys* file on the HPC and copy-paste the public key line there. Save all files and close both terminal windows. You should now be able to prompt a login with `ssh ncsu`.
+
+## For lab server
+```bash
+ssh-keygen -t ed25519
+```
+
+This time, you will need to create a passphrase ...

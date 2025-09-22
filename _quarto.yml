@@ -1,0 +1,29 @@
+project:
+  type: book
+
+book:
+  title: "Tiley Lab Manual"
+  author: "George P. Tiley"
+  date: "9/22/2025"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - chapters/01_Computing/hpc.qmd
+    - summary.qmd
+    - references.qmd
+  page-footer:
+    left: "Copyright 2025 George P. Tiley"
+    right: "v0.1.0"
+    border: false
+  page-navigation: true
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+
+
